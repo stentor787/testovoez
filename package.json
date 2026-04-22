@@ -1,0 +1,25 @@
+{
+  "name": "hoster-kz",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack serve --mode development --open"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^12.0.2",
+    "css-loader": "^7.1.4",
+    "html-loader": "^5.0.0",
+    "html-webpack-plugin": "^5.6.4",
+    "sass": "^1.81.0",
+    "sass-loader": "^16.0.4",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.105.2",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.3"
+  },
+  "dependencies": {
+    "inputmask": "^5.0.9",
+    "swiper": "^12.1.2"
+  }
+}

@@ -1,0 +1,226 @@
+@use "../abstracts/variables.scss";
+
+/* ======================
+   ABOUT / ПОЧЕМУ НАС ВЫБИРАЮТ
+====================== */
+.about {
+  width: 100%;
+  min-height: 354px;
+  padding: 55px 0;
+  background: url("../assets/backgrounds/backg-light.webp") center/cover
+    no-repeat;
+  box-sizing: border-box;
+
+  &__container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    display: flex;
+    gap: 35px;
+    flex-wrap: wrap;
+  }
+
+  &__left {
+    width: 554px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-md);
+  }
+
+  &__title {
+    font-size: 42px;
+    line-height: 42px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+  }
+
+  &__text {
+    font-size: var(--fs-body);
+    line-height: 24px;
+    color: var(--color-text-primary);
+    margin-bottom: 10px;
+  }
+
+  .about__link {
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    cursor: pointer;
+    transition:
+      color 0.2s ease,
+      opacity 0.2s ease;
+
+    &:link {
+      color: rgb(52, 48, 55);
+    }
+
+    &:hover {
+      color: var(--color-accent);
+      text-decoration: none;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+
+  /* Правый блок */
+  &__right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 270px);
+    gap: var(--gap-lg);
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  &__card {
+    width: 270px;
+    height: 80px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: var(--gap-md);
+    box-sizing: border-box;
+  }
+
+  &__card-text {
+    font-size: var(--fs-body);
+    line-height: 22px;
+    color: var(--color-text-primary);
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 1180px) and (min-width: 1025px) {
+  .about {
+    &__container {
+      gap: 30px;
+      padding: 0 20px;
+    }
+
+    &__left {
+      width: 450px;
+    }
+
+    &__title {
+      font-size: 38px;
+      line-height: 40px;
+    }
+
+    &__grid {
+      grid-template-columns: repeat(2, 240px);
+      gap: 20px;
+    }
+
+    &__card {
+      width: 240px;
+      gap: 15px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .about {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    &__container {
+      flex-direction: column;
+      gap: 40px;
+      padding: 0 20px;
+    }
+
+    &__left {
+      width: 100%;
+    }
+
+    &__title {
+      line-height: 44px;
+    }
+
+    &__text,
+    &__link {
+      font-size: 17px;
+      line-height: 24px;
+    }
+
+    &__right {
+      justify-content: flex-start;
+      width: 100%;
+    }
+
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--gap-md);
+    }
+
+    &__card {
+      width: 100%;
+      max-width: 347px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .about {
+    &__container {
+      flex-direction: column;
+      padding: 0 10px;
+    }
+
+    &__left {
+      width: 100%;
+    }
+
+    &__title {
+      font-size: 32px;
+      line-height: 38px;
+    }
+
+    &__text,
+    &__link {
+      font-size: 17px;
+      line-height: 24px;
+    }
+
+    &__right {
+      justify-content: flex-start;
+      width: 100%;
+    }
+
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: var(--gap-md);
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    &__card {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      gap: var(--gap-md);
+    }
+
+    &__icon {
+      img {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+      }
+    }
+
+    &__card-text {
+      font-size: 17px;
+      line-height: 20px;
+    }
+  }
+}

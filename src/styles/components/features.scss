@@ -1,0 +1,219 @@
+@use "../abstracts/variables.scss";
+
+/* ======================
+   FEATURES
+====================== */
+
+.features {
+  width: 100%;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  box-sizing: border-box;
+
+  &__container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-lg);
+  }
+
+  &__top {
+    display: flex;
+    gap: var(--gap-lg);
+    flex-wrap: wrap;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    gap: var(--gap-lg);
+
+    .feature--grid {
+      background-color: var(--color-surface);
+      border-radius: var(--radius-lg);
+      padding: 40px 30px;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+
+      & .feature__title {
+        margin-top: 8px;
+        margin-bottom: 15px;
+        font-size: 22px;
+        line-height: 24px;
+        font-weight: 700;
+        color: var(--color-accent);
+      }
+
+      & .feature__text {
+        font-size: var(--fs-body);
+        line-height: 24px;
+        color: var(--color-text-primary);
+      }
+    }
+
+    .feature--grid:nth-child(3) {
+      background: linear-gradient(135deg, var(--color-accent) 0%, #6366f1 100%);
+
+      .feature__title,
+      .feature__text {
+        color: var(--color-white);
+      }
+    }
+  }
+}
+.l-current {
+  color: var(--color-accent);
+  font-size: 22px;
+  margin-top: 8px;
+  margin-bottom: 15px;
+}
+
+.feature--left {
+  width: 570px;
+  height: 209px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+
+  .feature__title-left {
+    font-size: 42px;
+    line-height: 50px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: 20px;
+  }
+
+  .feature__text-left {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    color: var(--color-text-primary);
+    margin-bottom: 30px;
+  }
+
+  .feature__btn-left {
+    width: 184px;
+    height: 49px;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 14px 20px;
+
+    &:hover {
+      background-color: var(--color-hover);
+    }
+
+    &:active {
+      background-color: var(--color-hover);
+    }
+  }
+}
+
+.feature--right {
+  flex: 1;
+  max-width: 570px;
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.current-text {
+  line-height: 24px;
+  color: var(--color-text-primary);
+  font-size: var(--fs-body);
+}
+
+@media (max-width: 1024px) {
+  .features {
+    padding-top: 60px;
+  }
+  .features__top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-lg);
+    justify-content: space-between;
+    width: 95%;
+    margin: 0 auto;
+    align-items: flex-start;
+  }
+
+  .feature--left,
+  .feature--right {
+    flex: 1 1 calc(50% - 15px);
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: auto;
+  }
+  .feature--left {
+    .feature__title-left,
+    .feature__text-left {
+      max-width: 99%;
+    }
+  }
+  .features__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap-lg);
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .feature--left .feature__title-left {
+    font-size: 32px;
+    line-height: 42px;
+  }
+  .features {
+    padding-top: 60px;
+  }
+
+  .features__top {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-lg);
+    width: 95%;
+    margin: 0 auto;
+    align-items: stretch;
+  }
+  .feature--left,
+  .feature--right {
+    width: 100%;
+    max-width: 100%;
+    justify-content: flex-start;
+    height: auto;
+  }
+
+  .feature--left .feature__text-left {
+    font-size: 18px;
+  }
+
+  .features__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .feature--grid {
+    width: 100%;
+    max-width: 100%;
+  }
+}

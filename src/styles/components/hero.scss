@@ -1,0 +1,234 @@
+@use "../abstracts/variables.scss";
+
+/* ======================
+   HERO
+====================== */
+.hero {
+  height: 490px;
+  width: 100%;
+  background: url("../assets/backgrounds/backg-dark.webp") center/cover
+    no-repeat;
+  padding: 50px 20px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: clip;
+
+  &__container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &__content {
+    max-width: 570px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__title {
+    font-size: 52px;
+    line-height: 52px;
+    font-weight: 700;
+    color: var(--color-white);
+  }
+
+  &__subtitle {
+    font-size: 28px;
+    line-height: 30px;
+    font-weight: 400;
+    color: var(--color-white);
+  }
+
+  &__actions {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  &__media {
+    position: absolute;
+    right: -45px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 574px;
+    height: 394px;
+  }
+
+  &__img {
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.btn {
+  height: 49px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+
+  &--outline {
+    width: 184px;
+    background: transparent;
+    border: 1px solid var(--color-white);
+    color: var(--color-white);
+
+    &:hover {
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    &:active {
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  &--primary {
+    width: 147px;
+    background: var(--color-accent);
+    border: none;
+    color: var(--color-white);
+
+    &:hover {
+      background: var(--color-hover);
+    }
+
+    &:active {
+      background: var(--color-hover);
+    }
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1300px) {
+  .hero {
+    &__container {
+      max-width: 95%;
+      gap: 30px;
+      padding: 0 20px;
+    }
+
+    &__content {
+      max-width: 450px;
+    }
+
+    &__title {
+      font-size: 42px;
+      line-height: 46px;
+    }
+
+    &__subtitle {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    &__media {
+      width: 450px;
+      height: auto;
+      right: -20px;
+    }
+  }
+}
+/* Диапазон от 1024px до 1300px - сдвигаем изображение от правого края */
+@media (min-width: 1024px) and (max-width: 1310px) {
+  .hero {
+    &__media {
+      right: 10%; /* или нужное вам значение, например -10px, 20px и т.д. */
+    }
+  }
+}
+@media (max-width: 1050px) {
+  .hero {
+    max-height: 391px;
+    padding: 0 20px;
+    justify-content: flex-start;
+
+    &__container {
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: 726px;
+      width: 100%;
+      margin: 0 auto;
+      gap: 0;
+    }
+
+    &__content {
+      width: 570px;
+    }
+
+    &__media {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    padding: 0;
+    justify-content: flex-start;
+    max-height: 350px;
+
+    &__container {
+      width: 320px;
+      max-width: 100%;
+      margin: 0 auto;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    &__content {
+      width: 100%;
+      max-width: 320px;
+      align-items: center;
+      text-align: center;
+      gap: 30px;
+    }
+
+    &__title {
+      font-size: 32px;
+      line-height: 40px;
+      font-weight: 700;
+    }
+
+    &__subtitle {
+      width: 155px;
+      font-size: var(--fs-body);
+      line-height: 24px;
+      font-weight: 400;
+    }
+
+    &__actions {
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      align-items: center;
+    }
+
+    &__media {
+      display: none;
+    }
+  }
+}

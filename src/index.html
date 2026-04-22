@@ -1,0 +1,1135 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hoster.kz</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <!-- Верхняя часть десктоп -->
+        <div class="header__top header__top-desktop">
+          <div class="header__top-left">
+            <a href="#" class="header__item">
+              <span class="header__text header__text--primary">О компании</span>
+              <img src="./assets/header/downarrow.svg" alt="Стрелка вниз" />
+            </a>
+            <a href="#" class="header__item">
+              <img src="./assets/header/portfolio.svg" alt="Иконка портфолио" />
+              <span class="header__text header__text--accent">Портфолио</span>
+            </a>
+          </div>
+          <div class="header__top-right">
+            <a href="#" class="header__search-link" aria-label="Поиск">
+              <img src="./assets/header/search.svg" alt="" />
+            </a>
+            <div class="header__item">
+              <img src="./assets/header/phone.svg" alt="Иконка телефона" />
+              <span class="header__text header__text--phone"
+                >+7 (747) 094 10 00</span
+              >
+              <img src="./assets/header/downarrow.svg" alt="Стрелка вниз" />
+            </div>
+            <div class="header__item">
+              <span class="header__text header__text--lang">Рус</span>
+              <img src="./assets/header/downarrow.svg" alt="Стрелка вниз" />
+            </div>
+            <button class="header__btn">Оставить заявку</button>
+          </div>
+        </div>
+
+        <!-- Верхняя часть планшет/мобила -->
+        <div class="header__top header__top-tablet">
+          <div class="header__state-normal">
+            <div class="header__logo">
+              <img
+                src="./assets/header/logo.svg"
+                alt="Логотип Hoster.kz"
+                class="logo-tablet"
+              />
+              <img
+                src="./assets/header/logoMobile.svg"
+                alt="Логотип Hoster.kz"
+                class="logo-mobile"
+              />
+            </div>
+            <div class="header__icons-wrapper">
+              <div class="header__icons">
+                <a
+                  href="tel:+77470941000"
+                  class="header__icon-link"
+                  aria-label="Позвонить нам"
+                >
+                  <img src="./assets/header/call-calling.svg" alt="" />
+                </a>
+                <a
+                  href="https://wa.me/77470941000"
+                  class="header__icon-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Написать в WhatsApp"
+                >
+                  <img src="./assets/header/whatsapp.svg" alt="" />
+                </a>
+                <a
+                  href="https://wa.me/77470941000"
+                  class="header__icon-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Открыть поиск"
+                >
+                  <img src="./assets/header/search.svg" alt="" />
+                </a>
+              </div>
+              <div class="header__burger" id="burgerBtn">
+                <img src="./assets/header/burger.svg" alt="Иконка меню" />
+              </div>
+            </div>
+          </div>
+          <div class="header__state-catalog" style="display: none">
+            <div class="header__back-btn" data-back>
+              <img src="./assets/arrow/arrow-right.svg" alt="Назад" />
+              <span>Назад</span>
+            </div>
+            <div class="header__catalog-actions">
+              <img src="./assets/header/search.svg" alt="Поиск" />
+              <img
+                src="./assets/common/close.svg"
+                alt="Закрыть"
+                class="catalog-close"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- ГЛАВНОЕ МЕНЮ (упрощённое) -->
+        <div class="menu" id="menu">
+          <div class="menu__lang-wrapper">
+            <div class="menu__lang">
+              <p class="menu__lang-current">Рус</p>
+              <p>Қаз</p>
+              <p>Eng</p>
+            </div>
+            <hr class="menu__lang-divider" />
+          </div>
+
+          <nav class="menu__nav">
+            <ul class="menu__list">
+              <li class="menu__list-item" data-catalog="sites">
+                <span>Сайты</span>
+              </li>
+              <li class="menu__list-item">
+                <a href="#">Мобильные приложения</a>
+              </li>
+              <li class="menu__list-item">
+                <a href="#">Контекстная реклама</a>
+              </li>
+              <li class="menu__list-item" data-catalog="integrations">
+                <span>Интеграции</span>
+              </li>
+              <li class="menu__list-item" data-catalog="design">
+                <span>Дизайн</span>
+              </li>
+              <li class="menu__list-item">
+                <a href="#">Лицензии 1С-Битрикс</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Нижняя часть меню (исправлено) -->
+          <div class="menu__footer">
+            <div class="menu__footer-inner">
+              <a href="#" class="menu__footer-item">
+                <img src="./assets/header/portfolio.svg" alt="Портфолио" />
+                <span>Наши проекты</span>
+              </a>
+              <hr class="menu__footer-divider" />
+              <a href="#" class="menu__footer-item">
+                <img src="./assets/header/showreel.svg" alt="Showreel" />
+                <span>Showreel</span>
+              </a>
+              <hr class="menu__footer-divider" />
+            </div>
+          </div>
+        </div>
+
+        <!-- КАТАЛОГИ (пустые контейнеры) -->
+        <div class="menu-catalog" data-catalog="sites">
+          <div class="menu-catalog__list">
+            <ul class="menu-catalog__inner" id="catalog-sites-list"></ul>
+          </div>
+        </div>
+
+        <div class="menu-catalog" data-catalog="integrations">
+          <div class="menu-catalog__list">
+            <ul class="menu-catalog__inner" id="catalog-integrations-list"></ul>
+          </div>
+        </div>
+
+        <div class="menu-catalog" data-catalog="design">
+          <div class="menu-catalog__list">
+            <ul class="menu-catalog__inner" id="catalog-design-list"></ul>
+          </div>
+        </div>
+
+        <div class="header__divider"></div>
+
+        <!-- Десктопное меню -->
+        <div class="header__bottom header__bottom-desktop">
+          <div class="header__logo">
+            <img src="./assets/header/logo.svg" alt="Логотип Hoster.kz" />
+          </div>
+          <nav class="header__nav">
+            <a href="#" class="nav__item nav__item--icon">
+              <span>Сайты</span>
+              <img src="./assets/header/downarrow.svg" alt="Стрелка вниз" />
+            </a>
+            <a href="#" class="nav__item">Мобильные приложения</a>
+            <a href="#" class="nav__item">Контекстная реклама</a>
+            <a href="#" class="nav__item nav__item--icon">
+              <span>Интеграции</span>
+              <img src="./assets/header/downarrow.svg" alt="Стрелка вниз" />
+            </a>
+            <a href="#" class="nav__item nav__item--icon">
+              <span>Дизайн</span>
+              <img src="./assets/header/downarrow.svg" alt="Стрелка вниз" />
+            </a>
+            <a href="#" class="nav__item">Лицензии 1С-Битрикс</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="hero__container">
+        <div class="hero__content">
+          <div class="hero__text">
+            <h1 class="hero__title">UI KIT</h1>
+            <p class="hero__subtitle">Фирменные UI элементы siter.kz</p>
+          </div>
+          <div class="hero__actions">
+            <a href="#" class="btn btn--primary">Смотреть UI</a>
+            <a href="#" class="btn btn--outline">Оставить заявку</a>
+          </div>
+        </div>
+        <div class="hero__media">
+          <img
+            src="./assets/hero/hero-banner.webp"
+            alt="Превью UI Kit"
+            class="hero__img"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- Карусель -->
+    <section class="carousel" aria-label="Карусель партнеров">
+      <div class="carousel__inner">
+        <div class="carousel__track">
+          <!-- Основной циклический набор -->
+          <div class="carousel__item">
+            <img
+              src="./assets/vendors/logo-company1.svg"
+              alt="Логотип компании"
+            />
+          </div>
+          <span class="carousel__dot"></span>
+          <div class="carousel__item">
+            <img src="./assets/vendors/1c.svg" alt="Логотип 1C" />
+          </div>
+          <span class="carousel__dot"></span>
+          <div class="carousel__item">
+            <img src="./assets/vendors/1c-telephony.svg" alt="1C Телефония" />
+          </div>
+          <span class="carousel__dot"></span>
+          <div class="carousel__item">
+            <img src="./assets/vendors/api.svg" alt="API" />
+          </div>
+          <span class="carousel__dot"></span>
+          <div class="carousel__item">
+            <img
+              src="./assets/vendors/logo-company1.svg"
+              alt="Логотип компании"
+            />
+          </div>
+          <span class="carousel__dot"></span>
+          <div class="carousel__item">
+            <img src="./assets/vendors/bitrix_1c.svg" alt="Логотип 1C" />
+          </div>
+          <span class="carousel__dot"></span>
+          <div class="carousel__item">
+            <img src="./assets/vendors/bitrix_24 (1).svg" alt="Битрикс 24" />
+          </div>
+          <span class="carousel__dot"></span>
+          <div class="carousel__item" aria-hidden="true">
+            <img src="./assets/vendors/logo-company1.svg" alt="" />
+          </div>
+          <span class="carousel__dot" aria-hidden="true"></span>
+          <div class="carousel__item" aria-hidden="true">
+            <img src="./assets/vendors/1c.svg" alt="" />
+          </div>
+          <span class="carousel__dot" aria-hidden="true"></span>
+          <div class="carousel__item" aria-hidden="true">
+            <img src="./assets/vendors/1c-telephony.svg" alt="" />
+          </div>
+          <span class="carousel__dot" aria-hidden="true"></span>
+          <div class="carousel__item" aria-hidden="true">
+            <img src="./assets/vendors/api.svg" alt="" />
+          </div>
+          <span class="carousel__dot" aria-hidden="true"></span>
+          <div class="carousel__item" aria-hidden="true">
+            <img src="./assets/vendors/logo-company1.svg" alt="" />
+          </div>
+          <span class="carousel__dot" aria-hidden="true"></span>
+          <div class="carousel__item" aria-hidden="true">
+            <img src="./assets/vendors/bitrix_1c.svg" alt="" />
+          </div>
+          <span class="carousel__dot" aria-hidden="true"></span>
+          <div class="carousel__item" aria-hidden="true">
+            <img src="./assets/vendors/bitrix_24 (1).svg" alt="" />
+          </div>
+          <span class="carousel__dot" aria-hidden="true"></span>
+        </div>
+      </div>
+    </section>
+    <!-- Блок Features -->
+    <section class="features" aria-label="Особенности и услуги">
+      <div class="features__container">
+        <div class="features__top">
+          <!-- Левый блок -->
+          <div class="feature feature--left">
+            <h3 class="feature__title-left">Услуги</h3>
+            <p class="feature__text-left">
+              Оставьте заявку на создание сайта или консультацию по разработке
+              проекта, и наш менеджер перезвонит вам.
+            </p>
+            <button class="feature__btn-left">Оставить заявку</button>
+          </div>
+          <!-- Правый блок -->
+          <div class="feature feature--right">
+            <div class="feature__icon">
+              <img src="./assets/services/document.svg" alt="Иконка услуги" />
+            </div>
+            <h3 class="feature__title l-current">Создание сайтов</h3>
+            <p class="feature__text current-text">
+              Предлагаем для разработки на выбор 70+ шаблонов на готовом решении
+              и индивидуальную разработку под запросы и особенности бизнеса.
+            </p>
+          </div>
+        </div>
+        <!-- Сетка 6 блоков -->
+        <div class="features__grid">
+          <div class="feature feature--grid">
+            <div class="feature__icon">
+              <img src="./assets/services/tasks.svg" alt="Иконка услуги" />
+            </div>
+            <h3 class="feature__title">Контекстная реклама</h3>
+            <p class="feature__text">
+              Создаем и запускаем рекламные кампании в Яндекс и Google, повышая
+              продажи на сайте.
+            </p>
+          </div>
+          <div class="feature feature--grid">
+            <div class="feature__icon">
+              <img src="./assets/services/share.svg" alt="Иконка услуги" />
+            </div>
+            <h3 class="feature__title">Интеграция</h3>
+            <p class="feature__text">
+              Интегрируем сайты и интернет- магазины с учетными системами и
+              внешними сервисами по API.
+            </p>
+          </div>
+          <div class="feature feature--grid">
+            <div class="feature__icon">
+              <img
+                src="./assets/services/device-message.svg"
+                alt="Иконка услуги"
+              />
+            </div>
+            <h3 class="feature__title">Поддержка сайтов</h3>
+            <p class="feature__text">
+              Совершенствуем и развиваем интернет-проекты на 1С-Битрикс, делая
+              их успешнее.
+            </p>
+          </div>
+          <div class="feature feature--grid">
+            <div class="feature__icon">
+              <img src="./assets/services/mobile.svg" alt="Иконка услуги" />
+            </div>
+            <h3 class="feature__title">Мобильные приложения</h3>
+            <p class="feature__text">
+              Расширяем возможности онлайн торговли, разрабатывая приложения для
+              iOS и Android.
+            </p>
+          </div>
+          <div class="feature feature--grid">
+            <div class="feature__icon">
+              <img src="./assets/services/pen.svg" alt="Иконка услуги" />
+            </div>
+            <h3 class="feature__title">Дизайн</h3>
+            <p class="feature__text">
+              Создаем уникальные презентации и запоминаемый образ компании,
+              чтобы выделиться среди конкурентов.
+            </p>
+          </div>
+          <div class="feature feature--grid">
+            <div class="feature__icon">
+              <img src="./assets/services/vf.svg" alt="Иконка SEO" />
+            </div>
+            <h3 class="feature__title">Лицензии 1С</h3>
+            <p class="feature__text">
+              Предлагаем официальные лицензии для разработки и управления
+              веб-сайтами от партнера 1С-Битрикс.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about" aria-label="Почему нас выбирают">
+      <div class="about__container">
+        <!-- Левый блок -->
+        <div class="about__left">
+          <h2 class="about__title">Почему нас выбирают</h2>
+          <p class="about__text">
+            Мы всегда честно и открыто рассказываем о процессе разработки
+            веб-сайтов, делимся опытом и стремимся к тому, чтобы наши услуги
+            приносили вам реальную пользу в бизнесе. Разрабатываем сайты для
+            компаний Астаны, Алматы, Караганды и других городов Казахстана.
+          </p>
+          <a href="#" class="about__link">Читайте подробнее о нас</a>
+        </div>
+        <div class="about__right">
+          <div class="about__grid">
+            <article class="about__card">
+              <div class="about__icon">
+                <img
+                  src="./assets/about/Background (1).svg"
+                  alt="Иконка: Экономия времени клиентов"
+                />
+              </div>
+              <p class="about__card-text">Экономим время клиентов</p>
+            </article>
+            <article class="about__card">
+              <div class="about__icon">
+                <img
+                  src="./assets/about/Background (2).svg"
+                  alt="Иконка: Профессионализм подтвержден"
+                />
+              </div>
+              <p class="about__card-text">Наш профессионализм подтвержден</p>
+            </article>
+            <article class="about__card">
+              <div class="about__icon">
+                <img
+                  src="./assets/about/Background (3).svg"
+                  alt="Иконка: Уникальный дизайн"
+                />
+              </div>
+              <p class="about__card-text">
+                Лидеры во всех рейтингах 1С-Битрикс
+              </p>
+            </article>
+            <article class="about__card">
+              <div class="about__icon">
+                <img
+                  src="./assets/about/Background (4).svg"
+                  alt="Иконка: Поддержка и консультации"
+                />
+              </div>
+              <p class="about__card-text">
+                Команда опытных разработчиков именеджеров
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cases">
+      <div class="container cases__container">
+        <div class="cases__header">
+          <h2 class="cases__title">Эти компании сделали выбор в нашу пользу</h2>
+          <p class="cases__subtitle">
+            и получили свой <span class="text--accent">результат!</span>
+          </p>
+        </div>
+        <button
+          class="cases__nav cases__nav--prev"
+          aria-label="Предыдущий кейс"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15 18L9 12L15 6"
+              stroke="#1E1E1E"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <button class="cases__nav cases__nav--next" aria-label="Следующий кейс">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 18L15 12L9 6"
+              stroke="#1E1E1E"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <div class="swiper cases-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="cases__content">
+                <div class="cases__left-block">
+                  <h3 class="cases__left-title">
+                    Разработка интернет магазина для дистрибьютора шин
+                  </h3>
+                  <ul class="cases__list">
+                    <li>
+                      <img
+                        src="./assets/arrow/checkmark.svg"
+                        alt=""
+                        class="case__icon"
+                        width="20"
+                        height="20"
+                      />
+                      Разработали уникальный дизайн карточек товаров и каталога.
+                    </li>
+                    <li>
+                      <img
+                        src="./assets/arrow/checkmark.svg"
+                        alt=""
+                        class="case__icon"
+                        width="20"
+                        height="20"
+                      />
+                      Настроили интеграцию с 1С и CRM системой синхронизации
+                      товаров и заказов.
+                    </li>
+                    <li>
+                      <img
+                        src="./assets/arrow/checkmark.svg"
+                        alt=""
+                        class="case__icon"
+                        width="20"
+                        height="20"
+                      />
+                      Создали разделы: «Подробнее об акциях», «Запись на
+                      шиномонтаж», «Доставка».
+                    </li>
+                    <li>
+                      <img
+                        src="./assets/arrow/checkmark.svg"
+                        alt=""
+                        class="case__icon"
+                        width="20"
+                        height="20"
+                      />
+                      Подключили функционал оплаты онлайн, в рассрочку или
+                      кредит.
+                    </li>
+                    <li>
+                      <img
+                        src="./assets/arrow/checkmark.svg"
+                        alt=""
+                        class="case__icon"
+                        width="20"
+                        height="20"
+                      />
+                      Создали закрытый раздел с заказами для менеджеров, с
+                      данными по услугам.
+                    </li>
+                  </ul>
+                </div>
+                <div class="cases__right">
+                  <img
+                    src="./assets/banners/banners-tire-pro-bg.webp"
+                    alt="Баннер: интернет-магазин шин"
+                    class="cases__banner"
+                    width="570"
+                    height="366"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="cases__content">
+                <div class="cases__left-block">
+                  <h3 class="cases__left-title">
+                    Ведение контекстной рекламы для интернет-магазина сантехники
+                  </h3>
+                  <ul class="cases__list">
+                    <li>
+                      <img
+                        src="./assets/arrow/checkmark.svg"
+                        alt=""
+                        class="case__icon"
+                        width="20"
+                        height="20"
+                      />
+                      Привлекли более 34 000 заявок с сайта через Google Ads и
+                      Яндекс.Директ
+                    </li>
+                    <li>
+                      <img
+                        src="./assets/arrow/checkmark.svg"
+                        alt=""
+                        class="case__icon"
+                        width="20"
+                        height="20"
+                      />
+                      На 50% снизили цену клика (CPC), с 0,08$ до 0,04$
+                    </li>
+                    <li>
+                      <img
+                        src="./assets/arrow/checkmark.svg"
+                        alt=""
+                        class="case__icon"
+                        width="20"
+                        height="20"
+                      />
+                      Снизили стоимость обращения с 3,14$ до 0,58$
+                    </li>
+                  </ul>
+                </div>
+                <div class="cases__right">
+                  <img
+                    src="./assets/banners/banners-avatariya-bg.webp"
+                    alt="Баннер: интернет-магазин сантехники"
+                    class="cases__banner"
+                    width="570"
+                    height="366"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="cases__content">
+                <div class="cases__left-block">
+                  <h3 class="cases__left-title">
+                    Разработка индивидуального корпоративного сайта для сети
+                    детских парков
+                  </h3>
+                  <ul class="cases__list">
+                    <li>
+                      <img
+                        src="./assets/arrow/checkmark.svg"
+                        alt=""
+                        class="case__icon"
+                        width="20"
+                        height="20"
+                      />
+                      Оформили интерфейс в фирменном стиле компании
+                    </li>
+                    <li>
+                      <img
+                        src="./assets/arrow/checkmark.svg"
+                        alt=""
+                        class="case__icon"
+                        width="20"
+                        height="20"
+                      />
+                      Разработали личный кабинет для пользователей и регистрацию
+                      через SMS
+                    </li>
+                    <li>
+                      <img
+                        src="./assets/arrow/checkmark.svg"
+                        alt=""
+                        class="case__icon"
+                        width="20"
+                        height="20"
+                      />
+                      Создали интерфейс для просмотра билетов с QR-кодом из 1С
+                    </li>
+                    <li>
+                      <img
+                        src="./assets/arrow/checkmark.svg"
+                        alt=""
+                        class="case__icon"
+                        width="20"
+                        height="20"
+                      />
+                      Провели интеграцию с 1С для синхронизации данных
+                    </li>
+                    <li>
+                      <img
+                        src="./assets/arrow/checkmark.svg"
+                        alt=""
+                        class="case__icon"
+                        width="20"
+                        height="20"
+                      />
+                      Внедрили онлайн-оплату билетов
+                    </li>
+                  </ul>
+                </div>
+                <div class="cases__right">
+                  <img
+                    src="./assets/banners/banners-kit-bg.webp"
+                    alt="Баннер: сеть детских парков"
+                    class="cases__banner"
+                    width="570"
+                    height="366"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="cases__content">
+                <div class="cases__left-block">
+                  <h3 class="cases__left-title">
+                    Разработка логотипа и фирменного стиля для научной компании
+                  </h3>
+                  <ul class="cases__list">
+                    <li>
+                      <img
+                        src="./assets/arrow/checkmark.svg"
+                        alt=""
+                        class="case__icon"
+                        width="20"
+                        height="20"
+                      />
+                      Разработали 3 прототипа и финальный логотип
+                    </li>
+                    <li>
+                      <img
+                        src="./assets/arrow/checkmark.svg"
+                        alt=""
+                        class="case__icon"
+                        width="20"
+                        height="20"
+                      />
+                      Подобрали цветовую гамму в космическом стиле
+                    </li>
+                    <li>
+                      <img
+                        src="./assets/arrow/checkmark.svg"
+                        alt=""
+                        class="case__icon"
+                        width="20"
+                        height="20"
+                      />
+                      Выбрали шрифт для кириллицы и латиницы
+                    </li>
+                    <li>
+                      <img
+                        src="./assets/arrow/checkmark.svg"
+                        alt=""
+                        class="case__icon"
+                        width="20"
+                        height="20"
+                      />
+                      Создали стилеобразующие элементы
+                    </li>
+                  </ul>
+                </div>
+                <div class="cases__right">
+                  <img
+                    src="./assets/banners/banners-gfo-bg.webp"
+                    alt="Баннер: научная компания"
+                    class="cases__banner"
+                    width="570"
+                    height="366"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="cases__content">
+                <div class="cases__left-block">
+                  <h3 class="cases__left-title">
+                    Разработка корпоративного сайта для компании промышленного
+                    строительства
+                  </h3>
+                  <ul class="cases__list">
+                    <li>
+                      <img
+                        src="./assets/arrow/checkmark.svg"
+                        alt=""
+                        class="case__icon"
+                        width="20"
+                        height="20"
+                      />
+                      Оформили сайт в фирменном стиле
+                    </li>
+                    <li>
+                      <img
+                        src="./assets/arrow/checkmark.svg"
+                        alt=""
+                        class="case__icon"
+                        width="20"
+                        height="20"
+                      />
+                      Разместили информацию о компании
+                    </li>
+                    <li>
+                      <img
+                        src="./assets/arrow/checkmark.svg"
+                        alt=""
+                        class="case__icon"
+                        width="20"
+                        height="20"
+                      />
+                      Реализовали подачу заявок для поставщиков
+                    </li>
+                    <li>
+                      <img
+                        src="./assets/arrow/checkmark.svg"
+                        alt=""
+                        class="case__icon"
+                        width="20"
+                        height="20"
+                      />
+                      Добавили раздел для студентов
+                    </li>
+                    <li>
+                      <img
+                        src="./assets/arrow/checkmark.svg"
+                        alt=""
+                        class="case__icon"
+                        width="20"
+                        height="20"
+                      />
+                      Разработали 3 языковые версии
+                    </li>
+                  </ul>
+                </div>
+                <div class="cases__right">
+                  <img
+                    src="./assets/banners/banners-kss-bg.webp"
+                    alt="Баннер: промышленное строительство"
+                    class="cases__banner"
+                    width="570"
+                    height="366"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cases__pagination"></div>
+      </div>
+    </section>
+    <section class="faq">
+      <div class="container faq__container">
+        <div class="faq__left">
+          <h2 class="faq__title">FAQ</h2>
+          <p class="faq__text">
+            Мы собрали список самых часто задаваемых вопросов по разработке
+            сайтов и подробно ответили на них
+          </p>
+        </div>
+        <!-- аккордеон -->
+        <div class="faq__right">
+          <div class="faq__item">
+            <button class="faq__header" aria-expanded="false">
+              <span class="faq__question">
+                Почему Siter.KZ выбирают для разработки интернет-магазинов на
+                1С-Битрикс?
+              </span>
+              <span class="faq__icon"></span>
+            </button>
+            <div class="faq__content" hidden>
+              Создать сайт в нашей компании можно находясь в любом городе
+              Казахстана...
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__header" aria-expanded="false">
+              <span class="faq__question">
+                Есть ли у Siter.KZ опыт интеграции сайта с 1С и CRM?
+              </span>
+              <span class="faq__icon"></span>
+            </button>
+            <div class="faq__content" hidden>
+              Да, мы проводим интеграцию сайтов с 1С и CRM системами...
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__header" aria-expanded="false">
+              <span class="faq__question">
+                В каких годах Siter.KZ была №1 по продажам 1С-Битрикс?
+              </span>
+              <span class="faq__icon"></span>
+            </button>
+            <div class="faq__content" hidden>
+              Да, мы проводим интеграцию сайтов с 1С и CRM системами...
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__header" aria-expanded="false">
+              <span class="faq__question">
+                В каких городах Казахстана у вас можно заказать разработку
+                сайта? Работаете с клиентами из Астаны, Алматы и Караганды или
+                со всем Казахстаном?
+              </span>
+              <span class="faq__icon"></span>
+            </button>
+            <div class="faq__content" hidden>
+              <div class="faq__text">
+                <p>
+                  Создать сайт в нашей компании можно находясь в любом городе
+                  Казахстана. Наши клиенты успешно сотрудничают с нами из
+                  Караганды, Астаны, Алматы.
+                </p>
+                <p>
+                  3036 км - расстояние до города, где находится самый удаленный
+                  от нас клиент и мы с уверенностью можем сказать, что
+                  расстояние - не проблема. Оказание онлайн-услуг не требует
+                  личного присутствия команды разработчиков в офисе заказчика.
+                </p>
+                <p>
+                  Мы работаем удаленно и все вопросы решаем посредством связи по
+                  почте, телефону, WhatsApp, Skype. Эффективность удаленного
+                  взаимодействия и личных встреч примерно одинаковая, но времени
+                  можно сэкономить гораздо больше.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__header" aria-expanded="false">
+              <span class="faq__question">
+                Я не из Казахстана, как я могу создать сайт у вас?
+              </span>
+              <span class="faq__icon"></span>
+            </button>
+            <div class="faq__content" hidden>
+              Создать сайт в нашей компании можно находясь в любом городе
+              Казахстана...
+            </div>
+          </div>
+          <div class="faq__item faq__item--open">
+            <button class="faq__header" aria-expanded="true">
+              <span class="faq__question">
+                От чего зависит цена на контекстную рекламу сайта?
+              </span>
+              <span class="faq__icon"></span>
+            </button>
+            <div class="faq__content">
+              Мы работаем с клиентами по всему миру. Создание сайта и
+              сопровождение...
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <!-- Десктоп -->
+      <div class="footer footer--desktop">
+        <div class="container footer__container">
+          <div class="footer__top">
+            <p>©2026 ТОО «Компания Siter.KZ»</p>
+            <p>Все права защищены</p>
+          </div>
+          <div class="footer__divider"></div>
+          <div class="footer__grid">
+            <div class="footer__column">
+              <a href="#" class="footer__link">О нас</a>
+              <a href="#" class="footer__link">Портфолио</a>
+              <a href="#" class="footer__link">Блог</a>
+              <a href="#" class="footer__link">Контакты</a>
+            </div>
+            <div class="footer__column">
+              <a href="#" class="footer__link">Создание сайтов</a>
+              <a href="#" class="footer__link">Интернет-магазины</a>
+              <a href="#" class="footer__link">Индивидуальные решения</a>
+              <a href="#" class="footer__link">Гранты на разработку</a>
+            </div>
+            <div class="footer__column">
+              <a href="#" class="footer__link">Интеграция с 1С</a>
+              <a href="#" class="footer__link">Контекстная реклама</a>
+              <a href="#" class="footer__link">SEO продвижение</a>
+              <a href="#" class="footer__link">Поддержка сайтов</a>
+            </div>
+            <div class="footer__column">
+              <a href="tel:+77273124226" class="footer__link">
+                Алматы:
+                <span class="footer__phone-number">8 727 3 124 226</span>
+              </a>
+              <a href="tel:+77172696226" class="footer__link">
+                Астана: <span class="footer__phone-number">8 7172 696 226</span>
+              </a>
+              <a href="tel:+77212940226" class="footer__link">
+                Караганда:
+                <span class="footer__phone-number">8 7212 940 226</span>
+              </a>
+              <a href="tel:+77470949226" class="footer__link">
+                Мобильный:
+                <span class="footer__phone-number">8 747 094 92 26</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Планшет + Мобильный -->
+      <div class="footer footer--tablet">
+        <div class="container footer__container">
+          <div class="footer__bottom">
+            <div class="footer__copyright">
+              <p>©2026 ТОО «Компания Siter.KZ»</p>
+              <p>Все права защищены</p>
+            </div>
+            <div class="footer__column">
+              <a href="tel:+77273124226" class="footer__link">
+                Алматы:
+                <span class="footer__phone-number">8 727 3 124 226</span>
+              </a>
+              <a href="tel:+77172696226" class="footer__link">
+                Астана: <span class="footer__phone-number">8 7172 696 226</span>
+              </a>
+              <a href="tel:+77212940226" class="footer__link">
+                Караганда:
+                <span class="footer__phone-number">8 7212 940 226</span>
+              </a>
+              <a href="tel:+77470949226" class="footer__link">
+                Мобильный:
+                <span class="footer__phone-number">8 747 094 92 26</span>
+              </a>
+            </div>
+          </div>
+          <div class="footer__divider"></div>
+          <div class="footer__grid">
+            <div class="footer__column">
+              <a href="#" class="footer__link">О нас</a>
+              <a href="#" class="footer__link">Портфолио</a>
+              <a href="#" class="footer__link">Блог</a>
+              <a href="#" class="footer__link">Контакты</a>
+            </div>
+            <div class="footer__column">
+              <a href="#" class="footer__link">Создание сайтов</a>
+              <a href="#" class="footer__link">Интернет-магазины</a>
+              <a href="#" class="footer__link">Индивидуальные решения</a>
+              <a href="#" class="footer__link">Гранты на разработку</a>
+            </div>
+            <div class="footer__column">
+              <a href="#" class="footer__link">Интеграция с 1С</a>
+              <a href="#" class="footer__link">Контекстная реклама</a>
+              <a href="#" class="footer__link">SEO продвижение</a>
+              <a href="#" class="footer__link">Поддержка сайтов</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="popup" id="popupForm">
+      <div class="popup__backdrop"></div>
+      <div class="popup__content">
+        <button class="popup__close">
+          <img src="./assets/common/close.svg" alt="Закрыть" />
+        </button>
+        <p class="popup__title">Оставьте заявку</p>
+        <form class="popup__form">
+          <!-- Имя -->
+          <div class="popup__field popup__field--name">
+            <div class="popup__field-wrapper">
+              <span class="popup__field-label">Имя *</span>
+              <input
+                class="popup__field-input"
+                type="text"
+                placeholder="Введите имя"
+                required
+              />
+            </div>
+            <span class="popup__field-icon">
+              <img src="./assets/common/user.svg" alt="" />
+            </span>
+          </div>
+          <!-- Способ связи -->
+          <div class="popup__field popup__field--select" id="contactSelect">
+            <div class="popup__field-wrapper">
+              <input
+                class="popup__field-input value"
+                type="text"
+                placeholder="Удобный способ связи"
+                readonly
+              />
+            </div>
+            <span class="popup__field-icon">
+              <img src="./assets/arrow/down.svg" alt="" />
+            </span>
+
+            <!-- Список вариантов -->
+            <ul class="popup__select-options">
+              <li data-value="whatsapp">WhatsApp</li>
+              <li data-value="telegram">Telegram</li>
+              <li data-value="viber">Viber</li>
+            </ul>
+          </div>
+          <!-- Телефон -->
+          <div class="popup__field popup__field--phone">
+            <input
+              class="popup__field-input"
+              type="tel"
+              placeholder="Телефон"
+            />
+          </div>
+          <!-- Сообщение -->
+          <div class="popup__field popup__field--message">
+            <textarea
+              class="popup__field-textarea"
+              placeholder="Сообщение"
+            ></textarea>
+          </div>
+          <!-- Чекбокс -->
+          <label class="popup__checkbox">
+            <span class="popup__checkbox-box">
+              <input type="checkbox" required />
+              <svg
+                class="popup__checkbox-checkmark"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </span>
+            <span class="popup__checkbox-text">
+              соглашаюсь с политикой конфиденциальности
+            </span>
+          </label>
+          <!-- Радио кнопки -->
+          <div class="popup__radio-group">
+            <label class="popup__radio">
+              <input type="radio" name="messenger" value="whatsapp" />
+              <span class="popup__radio-dot"></span>
+              <span class="popup__radio-label">– whatsapp</span>
+            </label>
+            <label class="popup__radio">
+              <input type="radio" name="messenger" value="telegram" />
+              <span class="popup__radio-dot"></span>
+              <span class="popup__radio-label">– telegram</span>
+            </label>
+          </div>
+          <!-- Кнопка отправки -->
+          <button class="popup__submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </body>
+</html>
